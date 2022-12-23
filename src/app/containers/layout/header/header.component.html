@@ -1,11 +1,11 @@
 <p>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <button mat-icon-button type="button">
-        <mat-icon>home</mat-icon>
-      </button>
       <nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
-        <a mat-tab-link *ngFor="let link of links" (click)="activeLink = link" [active]="activeLink == link"> {{link}}
+        <a mat-tab-link *ngFor="let link of links; let i = index" (click)="activeLink = link; goTo(i)"
+          [active]="activeLink == link">
+          <mat-icon *ngIf="link==''">home</mat-icon>
+          {{link}}
         </a>
       </nav>
       <span class="head-spacer"></span>
@@ -19,7 +19,7 @@
           <mat-icon>settings</mat-icon>
         </button>
       </span>
-      <span class="left-border"> 
+      <span class="left-border">
         TEST
       </span>
     </mat-toolbar-row>

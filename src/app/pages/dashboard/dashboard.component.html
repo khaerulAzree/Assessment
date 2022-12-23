@@ -1,0 +1,12 @@
+<mat-sidenav-container class="sideNavContainer">
+  <mat-sidenav mode="side" opened="true" color="primary" class="appSideNav">
+    <mat-nav-list>
+      <mat-list-item>
+        <a mat-button routerLink="/dashboard"><mat-icon>dashboard</mat-icon><span>Dashboard</span></a>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>
