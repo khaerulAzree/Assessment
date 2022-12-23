@@ -15,7 +15,8 @@ import {
   HeaderComponent,
   LayoutComponent,
   BodyComponent,
-  SidebarComponent
+  SidebarComponent,
+  BreadcrumbsComponent
 } from './containers';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -50,6 +51,7 @@ const APP_CONTAINERS = [
     DashboardComponent,
     StatisticComponent,
     ProjectComponent,
+    BreadcrumbsComponent,
   ],
   imports: [
     BrowserModule,

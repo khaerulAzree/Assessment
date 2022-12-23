@@ -17,7 +17,8 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     data: {
-      title: 'Home'
+      title: 'Home',
+      breadcrumbs: 'Dashboard',
     },
     children: [
       {
@@ -30,6 +31,7 @@ const routes: Routes = [
         component: DashboardComponent,
         data: {
           title: 'Dashboard',
+          breadcrumbs: 'Dashboard',
         },
       },
       {
@@ -37,6 +39,7 @@ const routes: Routes = [
         component: FleetComponent,
         data: {
           title: 'Fleet',
+          breadcrumbs: 'Fleet',
         },
       },
       {
@@ -44,6 +47,7 @@ const routes: Routes = [
         component: WorkComponent,
         data: {
           title: 'Work',
+          breadcrumbs: 'Work',
         },
       },
       {
@@ -51,6 +55,7 @@ const routes: Routes = [
         component: StatisticComponent,
         data: {
           title: 'Statistic',
+          breadcrumbs: 'Statistic',
         },
         children: [
           {
@@ -58,13 +63,15 @@ const routes: Routes = [
             component: ProcumentComponent,
             data: {
               title: 'Procument',
+              breadcrumbs: 'Procument',
             },
             children: [
               {
                 path: 'performanceIndicator',
                 component: PerformanceIndicatorComponent,
                 data: {
-                  title: 'PerformanceIndicator',
+                  title: 'Performance Indicator',
+                  breadcrumbs: 'Performance Indicator',
                 },
                 children: [
                   {
@@ -72,13 +79,15 @@ const routes: Routes = [
                     component: IndicatorComponent,
                     data: {
                       title: 'Indicator',
+                      breadcrumbs: 'Indicator',
                     },
                   },
                   {
                     path: 'indicator/:chart',
                     component: IndicatorComponent,
                     data: {
-                      title: 'Indicator'
+                      title: 'Indicator',
+                      breadcrumbs: 'Indicator'
                     }
                   }
                 ]
@@ -88,6 +97,7 @@ const routes: Routes = [
                 component: ResearchComponent,
                 data: {
                   title: 'Research',
+                  breadcrumbs: 'Research',
                 },
               }
             ]
@@ -97,6 +107,7 @@ const routes: Routes = [
             component: ProjectComponent,
             data: {
               title: 'Project',
+              breadcrumbs: 'Project',
             },
           }
         ]
