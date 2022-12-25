@@ -10,13 +10,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 import {
   HeaderComponent,
   LayoutComponent,
   BodyComponent,
   SidebarComponent,
-  BreadcrumbsComponent
+  BreadcrumbsComponent,
+  SubSidebarComponent,
 } from './containers';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -36,6 +38,7 @@ const APP_CONTAINERS = [
   LayoutComponent,
   BodyComponent,
   SidebarComponent,
+  SubSidebarComponent,
 ];
 
 @NgModule({
@@ -63,6 +66,7 @@ const APP_CONTAINERS = [
     MatTabsModule,
     MatSidenavModule,
     MatListModule,
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

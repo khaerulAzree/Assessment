@@ -33,6 +33,7 @@ const routes: Routes = [
           title: 'Dashboard',
           breadcrumbs: 'Dashboard',
         },
+        runGuardsAndResolvers: 'always',
       },
       {
         path: 'fleet',
@@ -41,6 +42,7 @@ const routes: Routes = [
           title: 'Fleet',
           breadcrumbs: 'Fleet',
         },
+        runGuardsAndResolvers: 'always',
       },
       {
         path: 'work',
@@ -49,6 +51,7 @@ const routes: Routes = [
           title: 'Work',
           breadcrumbs: 'Work',
         },
+        runGuardsAndResolvers: 'always',
       },
       {
         path: 'statistics',
@@ -65,9 +68,10 @@ const routes: Routes = [
               title: 'Procument',
               breadcrumbs: 'Procument',
             },
+            runGuardsAndResolvers: 'always',
             children: [
               {
-                path: 'performanceIndicator',
+                path: 'performance-indicator',
                 component: PerformanceIndicatorComponent,
                 data: {
                   title: 'Performance Indicator',
@@ -81,6 +85,7 @@ const routes: Routes = [
                       title: 'Indicator',
                       breadcrumbs: 'Indicator',
                     },
+                    runGuardsAndResolvers: 'always',
                   },
                   {
                     path: 'indicator/:chart',
@@ -88,9 +93,11 @@ const routes: Routes = [
                     data: {
                       title: 'Indicator',
                       breadcrumbs: 'Indicator'
-                    }
+                    },
+                    runGuardsAndResolvers: 'always',
                   }
-                ]
+                ],
+                runGuardsAndResolvers: 'always',
               },
               {
                 path: 'research',
@@ -99,6 +106,7 @@ const routes: Routes = [
                   title: 'Research',
                   breadcrumbs: 'Research',
                 },
+                runGuardsAndResolvers: 'always',
               }
             ]
           },
@@ -109,10 +117,13 @@ const routes: Routes = [
               title: 'Project',
               breadcrumbs: 'Project',
             },
+            runGuardsAndResolvers: 'always',
           }
-        ]
+        ],
+        runGuardsAndResolvers: 'always',
       }
-    ]
+    ],
+    runGuardsAndResolvers: 'always',
   },
   { path: '**', redirectTo: 'dashboard' }
 ];

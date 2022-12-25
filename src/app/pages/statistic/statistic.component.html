@@ -1,14 +1,5 @@
 <mat-sidenav-container class="sideNavContainer">
-  <mat-sidenav mode="side" opened="true" color="primary" class="appSideNav">
-    <mat-nav-list>
-      <mat-list-item>
-        <a mat-button routerLink="/statistics/procument"><mat-icon>shopping_cart</mat-icon><span>Procument</span></a>
-      </mat-list-item>
-      <mat-list-item>
-        <a mat-button routerLink="/statistics/project"><mat-icon>list</mat-icon><span>Project</span></a>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
+  <app-sidebar></app-sidebar>
   <div class="content">
     <router-outlet></router-outlet>
   </div>

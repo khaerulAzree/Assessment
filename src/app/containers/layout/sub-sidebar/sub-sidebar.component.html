@@ -1,0 +1,25 @@
+<mat-sidenav mode="side" opened="true" color="primary" class="appSideNav">
+  <mat-nav-list>
+    <mat-list-item>
+      <p mat-button><span mat-h2>{{title | uppercase}}</span></p>
+    </mat-list-item>
+    <mat-list *ngFor="let menuItem of menuItems; let i = index " >
+      <div>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <a mat-list-item [routerLink]="menuItem.url"><mat-icon>{{menuItem.icon}}</mat-icon>{{menuItem.label}}</a>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list *ngIf="menuItem.children">
+            <mat-list-item  *ngFor="let child of menuItem.children; let j = index">
+              <a mat-list-item [routerLink]="child.url">{{child.label}}</a>
+            </mat-list-item>
+          </mat-list>
+        </mat-expansion-panel>
+      </div>
+      <div>
+      </div>
+    </mat-list>
+  </mat-nav-list>
+</mat-sidenav>

@@ -1,1 +1,7 @@
-<p>sidebar works!</p>
+<mat-sidenav mode="side" opened="true" color="primary" class="appSideNav">
+  <mat-nav-list>
+    <mat-list-item *ngFor="let menuItem of menuItems; let i = index">
+      <a mat-list-item [routerLink]="menuItem.url"><mat-icon>{{menuItem.icon}}</mat-icon><br><span class="menuLabel">{{menuItem.label}}</span></a>
+    </mat-list-item>
+  </mat-nav-list>
+</mat-sidenav>

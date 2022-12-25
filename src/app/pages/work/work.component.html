@@ -1,12 +1,7 @@
 <mat-sidenav-container class="sideNavContainer">
-  <mat-sidenav mode="side" opened="true" color="primary" class="appSideNav">
-    <mat-nav-list>
-      <mat-list-item>
-        <a mat-button routerLink="/work"><mat-icon>work</mat-icon><span>Work</span></a>
-      </mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
+  <app-sidebar></app-sidebar>
   <div class="content">
+    <app-breadcrumbs></app-breadcrumbs>
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>
